@@ -9,10 +9,17 @@ public:
         cout << "Hallo saya Function dari base class";
     }
 };
-class derivedClass : public baseClass
+class baseClass1
 {
 public:
-    void perkenalan()
+    virtual void perkenalan(){
+        cout << "Hallo saya funvtion dari derived class";
+    }
+};
+class derivedClass : public baseClass1
+{
+public:
+    void perkenalan1()
     {
         cout << "Hallo saya Function dari derived class";
     }
@@ -20,8 +27,8 @@ public:
 int main()
 {
     derivedClass a;
-
     a.perkenalan();
+    a.perkenalan1();
 
     return 0;
 }
